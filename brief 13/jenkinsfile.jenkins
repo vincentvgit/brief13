@@ -23,8 +23,9 @@ pipeline {
     stage("Terraform Init") {
       steps {
         script {
-          dir('ProdEnvironment/') {
-            sh 'terraform init'
+          dir('ProdEnvironment/') & sh 'terraform init'
+ {
+            
           }
           dir('stagingEnvironment/') {
             sh 'terraform init'
