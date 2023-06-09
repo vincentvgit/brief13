@@ -23,7 +23,7 @@ pipeline {
     stage("Terraform Init") {
       steps {
         script {
-          dir('ProdEnvironment/') & sh 'terraform init'
+         sh 'cd ProdEnvironement' & sh 'terraform init'
  {
             
           }
